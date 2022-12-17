@@ -15,7 +15,6 @@ function getCookie(name) {
   return null;
 }
 
-
 document.querySelectorAll('.ad-container').forEach(e => e.remove())
 document.querySelectorAll('[id^="nn_player"]').forEach(e => e.parentElement.remove())
 

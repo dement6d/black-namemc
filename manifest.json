@@ -7,12 +7,17 @@
         {
             "matches": [ "*://*.namemc.com/*" ],
             "run_at": "document_start",
-            "css": [ "dark.css" ]
+            "css": [ "other.css" ]
         },
         {
           "matches": [ "*://*.namemc.com/*" ],
           "run_at": "document_end",
           "js": [ "index.js" ]
+        },
+        {
+          "matches": [ "*://*.namemc.com/*" ],
+          "run_at": "document_start",
+          "js": [ "theme.js" ]
         }
     ],
     "background": {
@@ -21,7 +26,7 @@
     "action": {},
     "web_accessible_resources": [
       {
-        "resources": [ "/fonts/*" ],
+        "resources": [ "/fonts/*", "/theme.css" ],
         "matches": [ "*://*.namemc.com/*" ]
       }
     ]
