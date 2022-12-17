@@ -1,11 +1,15 @@
 :root {
     --bg: rgb(0, 0, 0);
     --main: rgb(5, 5, 5);
-    --card: rgb(15, 15, 15);
+    --card: rgb(10, 10, 10);
     --input-group: rgb(25, 25, 25);
     --input-group-border: rgb(30, 30, 30);
+    --input-group-border-hover: rgb(50, 50, 50);
     --input-group-border-focus: rgb(100, 100, 100);
-    --link-color: rgb(0, 103, 200);
+    --link-color-transparent: #4797ff27;
+    --link-color: #1c91f0;
+    --emerald-color: rgb(6, 196, 38);
+    --mod-color: rgb(158, 13, 13);
 }
 
 body {
@@ -37,10 +41,87 @@ main, header, footer {
     box-shadow: 0 0 0 1px var(--input-group-border-focus) !important;
 }
 
-a {
-    color: var(--link-color);
+a:not([class*="rank"]):not([class*="nav"]):not([class*="dropdown"]), .page-item.active .page-link, .nav-link:focus, .nav-link.active, .nav-link:hover {
+    color: var(--link-color) !important;
+}
+
+.page-item.active .page-link {
+    background-color: var(--link-color-transparent) !important;
+}
+
+.btn-primary {
+    border: unset !important;
+    background-color: var(--link-color-transparent) !important;
+    color: var(--link-color) !important;
 }
 
 .dropdown-menu, .popover-header {
     background-color: var(--input-group) !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--input-group-border) !important;
+}
+.dropdown-item.active {
+    background-color: var(--input-group-border-hover) !important;
+}
+
+.btn-secondary {
+    box-shadow: 0 1px 0 0 var(--input-group-border) !important;
+    border-color: var(--input-group-border) !important;
+    background: linear-gradient(180deg,var(--input-group), var(--input-group-border)) !important;
+}
+
+.skin-button-selected {
+    box-shadow: 0 0 10px var(--link-color) !important;
+}
+
+.bg-info {
+    background-color: var(--link-color-transparent) !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: var(--link-color) !important;
+}
+
+/* removed borders */
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0) !important;
+}
+.card {
+    box-shadow: unset !important;
+}
+.card-header, .nav-tabs {
+    border-bottom: unset !important;
+}
+.table td, .table th {
+    border-top: unset !important;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
+}
+::-webkit-scrollbar-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-corner {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #4b4b4b;
+    border-radius: 3px;
+}
+
+/* rank colors */
+
+.namemc-rank-10, .namemc-rank-10:visited, .namemc-rank-10:link {
+    color: var(--emerald-color) !important;
+}
+
+.namemc-rank-100, .namemc-rank-200, .namemc-rank-900, .namemc-rank-1000, .namemc-rank-100:visited, .namemc-rank-200:visited, .namemc-rank-900:visited, .namemc-rank-1000:visited, .namemc-rank-100:link, .namemc-rank-200:link, .namemc-rank-900:link, .namemc-rank-1000:link {
+    color: var(--mod-color) !important;
 }

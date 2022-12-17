@@ -8,16 +8,6 @@ h1.text-nowrap {
     font-family: 'oldLondon';
 }
 
-/*
-.namemc-rank-10, .namemc-rank-10:visited, .namemc-rank-10:link {
-    color: red !important;
-}
-
-.namemc-rank-100, .namemc-rank-200, .namemc-rank-900, .namemc-rank-1000, .namemc-rank-100:visited, .namemc-rank-200:visited, .namemc-rank-900:visited, .namemc-rank-1000:visited, .namemc-rank-100:link, .namemc-rank-200:link, .namemc-rank-900:link, .namemc-rank-1000:link {
-    color: purple !important;
-}
-*/
-
 /* skinart */
 .skin-button:not(.skinart) {
   margin: 1px !important;
