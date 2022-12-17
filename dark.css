@@ -5,10 +5,10 @@
 
 :root {
     --bg: rgb(0, 0, 0);
-    --main: rgb(10, 10, 10);
-    --card: rgb(20, 20, 20);
-    --input-group: rgb(30, 30, 30);
-    --input-group-border: rgb(35, 35, 35);
+    --main: rgb(5, 5, 5);
+    --card: rgb(15, 15, 15);
+    --input-group: rgb(25, 25, 25);
+    --input-group-border: rgb(30, 30, 30);
     --input-group-border-focus: rgb(100, 100, 100);
     --link-color: rgb(0, 103, 200);
 }
@@ -55,6 +55,7 @@ h1.text-nowrap {
     font-family: 'oldLondon';
 }
 
+/*
 .namemc-rank-10, .namemc-rank-10:visited, .namemc-rank-10:link {
     color: red !important;
 }
@@ -62,11 +63,18 @@ h1.text-nowrap {
 .namemc-rank-100, .namemc-rank-200, .namemc-rank-900, .namemc-rank-1000, .namemc-rank-100:visited, .namemc-rank-200:visited, .namemc-rank-900:visited, .namemc-rank-1000:visited, .namemc-rank-100:link, .namemc-rank-200:link, .namemc-rank-900:link, .namemc-rank-1000:link {
     color: purple !important;
 }
+*/
 
 /* skinart */
-.skin-button {
+.skin-button:not(.skinart) {
+    margin: 1px !important;
+}
+.skin-button.skinart {
     margin: 0px !important;
 }
-.skin-2d.skin-button {
+.skin-2d.skin-button:not(.skinart) {
+    border-radius: 3px !important;
+}
+.skin-2d.skin-button.skinart {
     border-radius: 0% !important;
 }
