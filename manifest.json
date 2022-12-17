@@ -1,0 +1,28 @@
+{
+    "name": "NameMC Black theme",
+    "description": "Pitch black theme for namemc.com",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [ "*://*.namemc.com/*" ],
+            "run_at": "document_start",
+            "css": [ "dark.css" ]
+        },
+        {
+          "matches": [ "*://*.namemc.com/*" ],
+          "run_at": "document_end",
+          "js": [ "index.js" ]
+        }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {},
+    "web_accessible_resources": [
+      {
+        "resources": [ "/fonts/*" ],
+        "matches": [ "*://*.namemc.com/*" ]
+      }
+    ]
+  }

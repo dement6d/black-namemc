@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'oldLondon';
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/OldLondon.ttf");
+}
+
+:root {
+    --bg: rgb(0, 0, 0);
+    --main: rgb(10, 10, 10);
+    --card: rgb(20, 20, 20);
+    --input-group: rgb(30, 30, 30);
+    --input-group-border: rgb(35, 35, 35);
+    --input-group-border-focus: rgb(100, 100, 100);
+    --link-color: rgb(0, 103, 200);
+}
+
+body {
+    background-color: var(--bg) !important;
+}
+
+main, header, footer {
+    background-color: var(--main) !important;
+}
+
+.checkered {
+    background-image: none !important;
+}
+
+.card {
+    background-color: var(--card) !important;
+}
+
+.input-group:not(.input-group-alt), .form-control {
+    background-color: var(--input-group) !important;
+    border-color: var(--input-group-border) !important;
+}
+
+.table td, .table th {
+    border-top: 1px solid var(--input-group-border) !important;
+}
+
+.input-group:not(.input-group-alt).focus, .form-control:focus {
+    box-shadow: 0 0 0 1px var(--input-group-border-focus) !important;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.dropdown-menu, .popover-header {
+    background-color: var(--input-group) !important;
+}
+
+h1.text-nowrap {
+    font-size: 60pt;
+    font-family: 'oldLondon';
+}
+
+.namemc-rank-10, .namemc-rank-10:visited, .namemc-rank-10:link {
+    color: red !important;
+}
+
+.namemc-rank-100, .namemc-rank-200, .namemc-rank-900, .namemc-rank-1000, .namemc-rank-100:visited, .namemc-rank-200:visited, .namemc-rank-900:visited, .namemc-rank-1000:visited, .namemc-rank-100:link, .namemc-rank-200:link, .namemc-rank-900:link, .namemc-rank-1000:link {
+    color: purple !important;
+}
+
+/* skinart */
+.skin-button {
+    margin: 0px !important;
+}
+.skin-2d.skin-button {
+    border-radius: 0% !important;
+}
