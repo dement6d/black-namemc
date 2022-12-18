@@ -1,23 +1,6 @@
 const usernames = [ 'insane' ]
 const customEmoji = 'https://s.namemc.com/img/emoji/twitter/26d3-fe0f.svg'
 
-function getCookie(name) {
-  // Split cookie string and get all individual name=value pairs in an array
-  var cookieArr = document.cookie.split(";");
-  // Loop through the array elements
-  for(var i = 0; i < cookieArr.length; i++) {
-      var cookiePair = cookieArr[i].split("=");
-      /* Removing whitespace at the beginning of the cookie name
-      and compare it with the given string */
-      if(name == cookiePair[0].trim()) {
-          // Decode the cookie value and return
-          return decodeURIComponent(cookiePair[1]);
-      }
-  }
-  // Return null if not found
-  return null;
-}
-
 document.querySelectorAll('.ad-container').forEach(e => e.remove())
 document.querySelectorAll('[id^="nn_player"]').forEach(e => e.parentElement.remove())
 
@@ -47,7 +30,7 @@ if (document.URL.includes('/profile/')) {
  * @param {boolean} skinartMode 
  */
 function changeSkinart(skinartMode) {
-  document.cookie = 'skinartMode=' + skinartMode
+  localStorage.setItem('skinartMode', skinartMode)
   const container = document.querySelector('.skin-2d.align-top.title-time.skin-button')?.parentElement?.parentElement
   if (container) {
     container.style.width = skinartMode ? '312px !important' : '324px !important'
@@ -63,7 +46,7 @@ function changeSkinart(skinartMode) {
   }
 }
 
-if (getCookie('skinartMode') === 'true') {
+if (localStorage.getItem('skinartMode') === 'true') {
   changeSkinart(true)
   const toggle = document.getElementById('toggleSkinart')
   if (toggle) toggle.checked = true;
@@ -73,4 +56,43 @@ if (getCookie('skinartMode') === 'true') {
 if (customEmoji && usernames?.length) {
   if (usernames.includes(document.querySelector('h1.text-nowrap')?.textContent))
     document.querySelectorAll('h1 > img.emoji, .nav-link.dropdown-toggle.pl-0 > img.emoji').forEach(e => e.setAttribute('src', customEmoji))
+}
+
+// add theme accent color picker
+const settings = document.createElement('li')
+settings.id = 'themeSettings'
+settings.classList = 'nav-item dropdown'
+settings.innerHTML = '<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">⚙️</a>' +
+  '<div class="dropdown-menu dropdown-menu-right">' + 
+    '<h7 class="dropdown-header">Theme Settings</h7>' +
+    '<div class="dropdown-divider"></div>' +
+    '<h8 class="dropdown-header">Accent</h8>' +
+    '<input class="dropdown-item" type="color" id="accentColor" value="#ff0000">' +
+    '<h8 class="dropdown-header">Toggle Theme <input type="checkbox" id="toggleBlack"/></h8>' +
+  '</div>'
+document.querySelector('header > nav')?.lastElementChild.lastElementChild.after(settings)
+document.getElementById('accentColor')?.addEventListener('change', e => setAccent(e.target.value))
+const toggleBlack = document.getElementById('toggleBlack')
+if (toggleBlack) {
+  toggleBlack.addEventListener('change', e => toggleTheme(e.target.checked))
+  toggleBlack.checked = localStorage.getItem('themeEnabled') == 'true'
+}
+
+const themeAccent = localStorage.getItem('themeAccent');
+if (themeAccent) {
+  setAccent(themeAccent)
+  const accentInput = document.querySelector('#accentColor')
+  if (accentInput) accentInput.value = themeAccent
+}
+
+function setAccent(color) {
+  const root = document.querySelector(':root')
+  root.style = root.style + `; --link-color: ${color} !important; --link-color-transparent: ${color}27;`
+  localStorage.setItem('themeAccent', color)
+}
+
+function toggleTheme(enabled) {
+  if (!enabled) document.getElementById('blackTheme')?.setAttribute('disabled', true)
+  else document.getElementById('blackTheme')?.removeAttribute('disabled')
+  localStorage.setItem('themeEnabled', enabled)
 }

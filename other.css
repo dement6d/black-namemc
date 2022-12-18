@@ -21,3 +21,15 @@ h1.text-nowrap {
 .skin-2d.skin-button.skinart {
   border-radius: 0% !important;
 }
+
+/* settings */
+#accentColor {
+  -webkit-appearance: none;
+  border: none;
+}
+#accentColor::-webkit-color-swatch {
+  border: none;
+}
+#accentColor::-webkit-color-swatch-wrapper {
+  padding: 0;
+}

@@ -6,10 +6,10 @@
     --input-group-border: rgb(30, 30, 30);
     --input-group-border-hover: rgb(50, 50, 50);
     --input-group-border-focus: rgb(100, 100, 100);
-    --link-color-transparent: #eb454527;
-    --link-color: #e63d3d;
-    --emerald-color: rgb(26, 170, 26);
-    --mod-color: rgb(131, 25, 180);
+    --link-color-transparent: #2fc7e227;
+    --link-color: #2d95db;
+    --emerald-color: rgb(26, 170, 38);
+    --mod-color: rgb(180, 25, 25);
 }
 
 body {

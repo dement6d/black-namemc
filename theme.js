@@ -21,6 +21,9 @@ if (getCookie('theme') === 'dark') {
   link.type = "text/css";
   link.rel = "stylesheet";
   link.media = "screen,print";
+  console.log(localStorage.getItem('themeEnabled'))
+  link.disabled = localStorage.getItem('themeEnabled') != 'true' || undefined
+  link.id = 'blackTheme'
   const html = document.getElementsByTagName("html")
   if (html.length) html[0].appendChild(link);
 }
