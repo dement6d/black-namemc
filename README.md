@@ -5,4 +5,4 @@ Features:
 - Toggle skinart mode
 - Custom name profile font
 
-<img src="https://user-images.githubusercontent.com/93228501/208263368-6c277b85-50e8-4c31-a4d9-1cac48f5e046.png" align="center"/>
+<img src="https://user-images.githubusercontent.com/93228501/208280971-9a027dfa-9d73-46f8-8f78-b3dab5787232.png" align="center"/>
