@@ -21,5 +21,6 @@ if (getCookie('theme') === 'dark') {
   link.type = "text/css";
   link.rel = "stylesheet";
   link.media = "screen,print";
-  document.getElementsByTagName("html")[0].appendChild(link);
+  const html = document.getElementsByTagName("html")
+  if (html.length) html[0].appendChild(link);
 }

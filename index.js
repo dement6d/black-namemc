@@ -1,3 +1,6 @@
+const usernames = [ 'insane' ]
+const customEmoji = 'https://s.namemc.com/img/emoji/twitter/26d3-fe0f.svg'
+
 function getCookie(name) {
   // Split cookie string and get all individual name=value pairs in an array
   var cookieArr = document.cookie.split(";");
@@ -64,4 +67,10 @@ if (getCookie('skinartMode') === 'true') {
   changeSkinart(true)
   const toggle = document.getElementById('toggleSkinart')
   if (toggle) toggle.checked = true;
+}
+
+// add emoji to specified usernames
+if (customEmoji && usernames?.length) {
+  if (usernames.includes(document.querySelector('h1.text-nowrap')?.textContent))
+    document.querySelectorAll('h1 > img.emoji, .nav-link.dropdown-toggle.pl-0 > img.emoji').forEach(e => e.setAttribute('src', customEmoji))
 }
