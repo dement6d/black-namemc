@@ -1,11 +1,11 @@
 :root {
-    --bg: rgb(0, 0, 0);
+    --bg: rgb(5, 5, 5);
     --main: rgb(5, 5, 5);
     --card: rgb(10, 10, 10);
-    --input-group: rgb(25, 25, 25);
-    --input-group-border: rgb(30, 30, 30);
-    --input-group-border-hover: rgb(50, 50, 50);
-    --input-group-border-focus: rgb(100, 100, 100);
+    --input-group: rgb(15, 15, 15);
+    --input-group-border: rgb(20, 20, 20);
+    --input-group-border-hover: rgb(30, 30, 30);
+    --input-group-border-focus: rgb(40, 40, 40);
     --link-color-transparent: #2fc7e227;
     --link-color: #2d95db;
     --emerald-color: rgb(26, 170, 38);
