@@ -22,7 +22,7 @@ if (document.URL.includes('/profile/')) {
   skinArtMode.innerHTML = 'Skinart Mode <input id="toggleSkinart" type="checkbox"/>'
   skinsHeader?.lastChild.after(skinArtMode)
 
-  document.getElementById('toggleSkinart').addEventListener('change', e => changeSkinart(e.target.checked))
+  document.getElementById('toggleSkinart')?.addEventListener('change', e => changeSkinart(e.target.checked))
 }
 
 /**
