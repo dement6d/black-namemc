@@ -62,8 +62,11 @@ a:not([class*="rank"]):not([class*="nav"]):not([class*="dropdown"]), .page-item.
     background-color: var(--input-group) !important;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover, .popover {
     background-color: var(--input-group-border) !important;
+}
+.bs-popover-top > .arrow:after {
+    border-top-color: var(--input-group-border) !important;
 }
 .dropdown-item.active {
     background-color: var(--input-group-border-hover) !important;
@@ -127,4 +130,8 @@ hr {
 
 .namemc-rank-100, .namemc-rank-200, .namemc-rank-900, .namemc-rank-1000, .namemc-rank-100:visited, .namemc-rank-200:visited, .namemc-rank-900:visited, .namemc-rank-1000:visited, .namemc-rank-100:link, .namemc-rank-200:link, .namemc-rank-900:link, .namemc-rank-1000:link {
     color: var(--mod-color) !important;
+}
+
+.dropping {
+    background-color: var(--link-color-transparent) !important;
 }

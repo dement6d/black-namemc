@@ -96,3 +96,10 @@ function toggleTheme(enabled) {
   else document.getElementById('blackTheme')?.removeAttribute('disabled')
   localStorage.setItem('themeEnabled', enabled)
 }
+
+// dropping names
+const statusBar = document.querySelector('#status-bar.bg-info')
+if (statusBar) {
+  // statusBar.classList.remove('bg-info')
+  // statusBar.classList.add('dropping')
+}
