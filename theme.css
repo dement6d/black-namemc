@@ -132,6 +132,7 @@ hr {
     color: var(--mod-color) !important;
 }
 
-.dropping {
+.dropping, .btn-info.btn-sm {
     background-color: var(--link-color-transparent) !important;
+    border-color: unset !important;
 }
