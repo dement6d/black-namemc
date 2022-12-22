@@ -20,7 +20,7 @@ link.href = "chrome-extension://" + chrome.runtime.id + "/theme.css"
 link.type = "text/css";
 link.rel = "stylesheet";
 link.media = "screen,print";
-link.disabled = localStorage.getItem('themeEnabled') != 'true' || getCookie('theme') != 'dark' || undefined
+link.disabled = localStorage.getItem('themeEnabled') != 'true' || getCookie('theme') === 'light' || undefined
 link.id = 'blackTheme'
 const html = document.getElementsByTagName("html")
 if (html.length) html[0].appendChild(link);
