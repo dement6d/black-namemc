@@ -7,7 +7,7 @@ document.querySelectorAll('[id^="nn_player"]').forEach(e => e.parentElement.remo
 const ad = document.createElement('div');
 ad.classList = 'col-6 col-sm-4 col-lg py-1'
 ad.innerHTML =
-  '<small style="display: flex; flex-direction: row; gap: 3pt; align-items: center;">' +
+  '<small style="display: flex; flex-direction: row; gap: 3pt; align-items: center; justify-content: center;">' +
     '<a href="https://github.com/dement6d/black-namemc">Black theme</a> by' +
     '<p style="font-family: \'oldLondon\'; font-size: 12pt; margin-bottom: 0.5rem;">demented</p>' +
   '</small>';
