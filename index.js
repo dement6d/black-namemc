@@ -95,7 +95,7 @@ function setThemeState(enabled) {
   if (!enabled) document.getElementById('blackTheme')?.setAttribute('disabled', true)
   else {
     document.getElementById('blackTheme')?.removeAttribute('disabled')
-    document.cookie = "theme=dark"
+    setCookie('theme', 'dark')
   }
   localStorage.setItem('themeEnabled', enabled)
 }
@@ -105,4 +105,8 @@ const statusBar = document.querySelector('#status-bar.bg-info')
 if (statusBar) {
   // statusBar.classList.remove('bg-info')
   // statusBar.classList.add('dropping')
+}
+
+function setCookie(name, value, expiration = 3.15576e+11) {
+  document.cookie = `${name}=${value}; domain=.namemc.com; path=/; expires=${(new Date(Date.now() + expiration)).toUTCString()}`;
 }
