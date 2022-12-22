@@ -74,7 +74,7 @@ document.querySelector('header > nav')?.lastElementChild.lastElementChild.after(
 document.getElementById('accentColor')?.addEventListener('change', e => setAccent(e.target.value))
 const toggleBlack = document.getElementById('toggleBlack')
 if (toggleBlack) {
-  toggleBlack.addEventListener('change', e => toggleTheme(e.target.checked))
+  toggleBlack.addEventListener('change', e => setThemeState(e.target.checked))
   toggleBlack.checked = localStorage.getItem('themeEnabled') == 'true'
 }
 
@@ -91,9 +91,12 @@ function setAccent(color) {
   localStorage.setItem('themeAccent', color)
 }
 
-function toggleTheme(enabled) {
+function setThemeState(enabled) {
   if (!enabled) document.getElementById('blackTheme')?.setAttribute('disabled', true)
-  else document.getElementById('blackTheme')?.removeAttribute('disabled')
+  else {
+    document.getElementById('blackTheme')?.removeAttribute('disabled')
+    document.cookie = "theme=dark"
+  }
   localStorage.setItem('themeEnabled', enabled)
 }
 
