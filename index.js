@@ -111,6 +111,7 @@ function setCookie(name, value, expiration = 3.15576e+11) {
   document.cookie = `${name}=${value}; domain=.namemc.com; path=/; expires=${(new Date(Date.now() + expiration)).toUTCString()}`;
 }
 
+// opens the settings if its the first time using the extension
 if (
     localStorage.getItem('bnFirstTime') !== 'true' && 
     document.querySelector('#themeSettings a') !== null
