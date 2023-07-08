@@ -2,10 +2,14 @@
   font-family: 'oldLondon';
   src: url("chrome-extension://__MSG_@@extension_id__/fonts/OldLondon.ttf");
 }
+@font-face {
+  font-family: 'minecraftia';
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/minecraftia.ttf");
+}
 
 h1.text-nowrap {
-    font-size: 60pt;
-    font-family: 'oldLondon';
+    /* font-size: 60pt; */
+    font-family: 'minecraftia';
 }
 
 /* skinart */
