@@ -69,7 +69,7 @@ settings.classList = 'nav-item dropdown'
 settings.innerHTML =
     '<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">🎨</a>' +
     '<div class="dropdown-menu dropdown-menu-right">' +
-        '<h2 class="dropdown-header">Theme Settings</h7>' +
+        '<h2 class="dropdown-header">Theme Settings</h2>' +
         '<div class="dropdown-divider"></div>' +
         '<h8 class="dropdown-header">Accent</h8>' +
         '<input class="dropdown-item" type="color" id="accentColor" value="#ff0000">' +
