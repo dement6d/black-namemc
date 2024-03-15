@@ -4,8 +4,9 @@
 - Black theme
 - Removed ad gaps
 - Toggle skinart mode
-- Custom name profile font
+- Minecraft fonts on IGNs
 - Custom theme accent color
+- Custom darkness/brightness slider
 
 ## How to install
 1. You must clone this repository or download it as a .zip file by pressing the **Code** button or clicking [here](https://github.com/dement6d/black-namemc/archive/refs/heads/main.zip)
