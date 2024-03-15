@@ -44,11 +44,8 @@ main, header, footer {
 a:not([class*="rank"]):not([class*="nav"]):not([class*="dropdown"]), .page-item.active .page-link, .nav-link:focus, .nav-link.active, .nav-link:hover {
     color: var(--link-color) !important;
 }
-.nav-link.active, .badge-primary, a.badge-primary:focus, a.badge-primary:hover {
-    background-color: var(--link-color-transparent) !important;
-}
-
-.page-item.active .page-link {
+.nav-link.active, .badge-primary, a.badge-primary:focus, a.badge-primary:hover,
+.page-item.active .page-link, [href^="/minecraft-skins/tag"].rounded-pill {
     background-color: var(--link-color-transparent) !important;
 }
 
