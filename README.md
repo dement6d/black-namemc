@@ -14,4 +14,4 @@
 
 ## Preview
 Note: By default, the font is set to the Minecraft font
-<img src="https://user-images.githubusercontent.com/93228501/208280971-9a027dfa-9d73-46f8-8f78-b3dab5787232.png" align="center"/>
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/93228501/313105090-f242e82c-ea4e-457d-b3c5-65255f62e707.png" align="center"/>
