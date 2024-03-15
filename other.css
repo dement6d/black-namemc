@@ -6,11 +6,35 @@
   font-family: 'minecraftia';
   src: url("chrome-extension://__MSG_@@extension_id__/fonts/minecraftia.ttf");
 }
-
-h1.text-nowrap {
-    /* font-size: 60pt; */
-    font-family: 'minecraftia';
+@font-face {
+  font-family: 'MinecraftSeven';
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/MinecraftSeven.woff");
 }
+@font-face {
+  font-family: 'MinecraftTen';
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/MinecraftTen.woff");
+}
+
+
+.dropdown-toggle > span,
+h5 span.mono,
+a[href^="/skin"] span,
+a[href^="/profile"]:not(.dropdown-item),
+a[href^="/my-profile/switch"].dropdown-item,
+table a[href^="/search"][translate="no"] {
+    /* display: inline-flex;
+    scale: 0.9;
+    transform: translateY(25%); */
+    font-family: 'MinecraftSeven';
+}
+h1.text-nowrap[translate="no"] {
+    font-family: 'MinecraftTen';
+    font-weight: normal;
+}
+
+/* a:has(.emoji), h1:has(.emoji) {
+    display: flex;
+} */
 
 /* skinart */
 .skin-button:not(.skinart) {
