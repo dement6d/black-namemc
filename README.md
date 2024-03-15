@@ -15,4 +15,4 @@
 
 ## Preview
 Note: By default, the font is set to the Minecraft font
-<img src="https://github.com/dement6d/black-namemc/assets/93228501/c3ff7819-41ad-4ce2-aa0a-5d2615c7f039" align="center"/>
+<img src="https://github.com/dement6d/black-namemc/assets/93228501/e2fd0949-bdf3-4d5c-95e1-77a8a522b35b" align="center"/>
