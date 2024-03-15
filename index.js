@@ -81,6 +81,17 @@ settings.innerHTML =
     '</div>';
 document.querySelector('header > nav')?.lastElementChild.lastElementChild.after(settings)
 
+document.getElementById('darkness')?.addEventListener('change', e => setDarkness(e.target.value));
+document.getElementById('accentColor')?.addEventListener('change', e => setAccent(e.target.value));
+
+const darknessInput = document.querySelector('#darkness');
+if (darknessInput) darknessInput.value = themeDarkness;
+
+if (themeAccent) {
+    const accentInput = document.querySelector('#accentColor');
+    if (accentInput) accentInput.value = themeAccent;
+}
+
 // Theme toggle
 const toggleBlack = document.getElementById('toggleBlack')
 if (toggleBlack) {

@@ -55,17 +55,13 @@ const html = document.getElementsByTagName("html")
 if (html.length) html[0].appendChild(link);
 
 // Darkness
-document.getElementById('darkness')?.addEventListener('change', e => setDarkness(e.target.value));
 let themeDarkness = localStorage.getItem('themeDarkness');
 if (themeDarkness == undefined || themeDarkness == null) {
     themeDarkness = 100;
 }
 setDarkness(themeDarkness);
-const darknessInput = document.querySelector('#darkness');
-if (darknessInput) darknessInput.value = themeDarkness;
 
 // Accent
-document.getElementById('accentColor')?.addEventListener('change', e => setAccent(e.target.value))
 const themeAccent = localStorage.getItem('themeAccent');
 if (themeAccent) {
     setAccent(themeAccent)
