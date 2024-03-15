@@ -67,7 +67,7 @@ const settings = document.createElement('li')
 settings.id = 'themeSettings'
 settings.classList = 'nav-item dropdown'
 settings.innerHTML =
-    '<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">⚙️</a>' +
+    '<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">🎨</a>' +
     '<div class="dropdown-menu dropdown-menu-right">' +
         '<h2 class="dropdown-header">Theme Settings</h7>' +
         '<div class="dropdown-divider"></div>' +
