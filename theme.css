@@ -16,6 +16,11 @@ body {
     background-color: var(--bg) !important;
 }
 
+::selection {
+    color: white;
+    background-color: var(--link-color-transparent);
+}
+
 main, header, footer {
     background-color: var(--main) !important;
 }
