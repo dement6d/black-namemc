@@ -19,35 +19,6 @@ function changeSkinart(skinartMode) {
     }
 }
 
-function setAccent(color) {
-    const root = document.querySelector(':root');
-    const prevStyle = root.getAttribute('style');
-    console.log(prevStyle)
-    root.style = prevStyle + `; --link-color: ${color} !important; --link-color-transparent: ${color}27;`
-    localStorage.setItem('themeAccent', color)
-}
-
-function setDarkness(darkness) {
-    const addition = (100 - darkness) / 2;
-    const bg = 5 + addition;
-    const main = 5 + addition;
-    const card = 10 + addition;
-    const inpGrp = 15 + addition;
-    const inpGrpBrd = 20 + addition;
-    const inpGrpBrdHov = 30 + addition;
-    const inpGrpBrdFoc = 40 + addition;
-    const root = document.querySelector(':root');
-    const prevStyle = root.getAttribute('style');
-    root.style = prevStyle + `; --bg: rgb(${bg}, ${bg}, ${bg});` +
-        `--main: rgb(${main}, ${main}, ${main});` +
-        `--card: rgb(${card}, ${card}, ${card});` +
-        `--input-group: rgb(${inpGrp}, ${inpGrp}, ${inpGrp});` +
-        `--input-group-border: rgb(${inpGrpBrd}, ${inpGrpBrd}, ${inpGrpBrd});` +
-        `--input-group-border-hover: rgb(${inpGrpBrdHov}, ${inpGrpBrdHov}, ${inpGrpBrdHov});` +
-        `--input-group-border-focus: rgb(${inpGrpBrdFoc}, ${inpGrpBrdFoc}, ${inpGrpBrdFoc});`;
-    localStorage.setItem('themeDarkness', darkness);
-}
-
 function setCookie(name, value, expiration = 3.15576e+11) {
     document.cookie = `${name}=${value}; domain=.namemc.com; path=/; expires=${(new Date(Date.now() + expiration)).toUTCString()}`;
 }
@@ -60,10 +31,6 @@ function setThemeState(enabled) {
     }
     localStorage.setItem('themeEnabled', enabled)
 }
-
-
-const usernames = ['insane']
-const customEmoji = 'https://s.namemc.com/img/emoji/twitter/26d3-fe0f.svg'
 
 document.querySelectorAll('.ad-container').forEach(e => e.remove())
 document.querySelectorAll('[id^="nn_player"]').forEach(e => e.parentElement.remove())
@@ -95,12 +62,6 @@ if (localStorage.getItem('skinartMode') === 'true') {
     if (toggle) toggle.checked = true;
 }
 
-// add emoji to specified usernames
-if (customEmoji && usernames?.length) {
-    if (usernames.includes(document.querySelector('h1.text-nowrap')?.textContent))
-        document.querySelectorAll('h1 > img.emoji, .nav-link.dropdown-toggle.pl-0 > img.emoji').forEach(e => e.setAttribute('src', customEmoji))
-}
-
 // add theme accent color picker
 const settings = document.createElement('li')
 settings.id = 'themeSettings'
@@ -126,25 +87,6 @@ if (toggleBlack) {
     toggleBlack.addEventListener('change', e => setThemeState(e.target.checked))
     toggleBlack.checked = localStorage.getItem('themeEnabled') == 'true'
 }
-
-// Accent
-document.getElementById('accentColor')?.addEventListener('change', e => setAccent(e.target.value))
-const themeAccent = localStorage.getItem('themeAccent');
-if (themeAccent) {
-    setAccent(themeAccent)
-    const accentInput = document.querySelector('#accentColor');
-    if (accentInput) accentInput.value = themeAccent;
-}
-
-// Darkness
-document.getElementById('darkness')?.addEventListener('change', e => setDarkness(e.target.value));
-let themeDarkness = localStorage.getItem('themeDarkness');
-if (themeDarkness == undefined || themeDarkness == null) {
-    themeDarkness = 100;
-}
-setDarkness(themeDarkness);
-const darknessInput = document.querySelector('#darkness');
-if (darknessInput) darknessInput.value = themeDarkness;
 
 // dropping names
 const statusBar = document.querySelector('#status-bar.bg-info')
